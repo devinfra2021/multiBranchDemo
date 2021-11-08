@@ -1,9 +1,11 @@
 pipeline {
         agent { label "Maven" }
-        stages("1") {
-                steps{
+        stages{
+              stage("MainBranch") {
+	      	steps{
                         echo "this is coming from MAIN branch of git project"
                 }
+		}	
         }
 }
 
